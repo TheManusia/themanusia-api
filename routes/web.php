@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group([], function () use ($router) {
+    $router->get('socmed', 'SocmedController@index');
+    $router->get('video', 'VideoController@index');
+});
